@@ -2,43 +2,55 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 
 class List extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      stats: [],
+      error: null,
+      isLoaded: false,
+      stats: []
     };
   }
-  compenentWillMount() {
+  compenentDidMount() {
 
     fetch('https://api.fortnitetracker.com/v1/profile/pc/lonefreak', {
       method: "GET",
-      mode: "no-cors",
-      credentials: "include",
       headers: {
         "TRN-Api-Key": "582365b9-87d8-4c86-af13-a4c0caaec1b1"
       }
-    }).then(results => {
-        return results.json();
-      }).then(data => {
-        let stats = data.results.map((stats) => {
-          return(
-              <li key={stats.results}>
-                {stats.stats.kd.displayValue}
-              </li>
-          )
-      })
-      this.setState({stats : stats});
-      console.log("state", this.state.stats);
     })
+      .then(results => results.json())
+      .then((result) => {
+        this.setState({
+          isLoaded: true,
+          stats: result.stats
+        });
+      },
+      (error) => {
+        this.setState({
+          isLoaded: true,
+          error
+        });
+      }
+    )
   }
 
   render() {
-    const {posts} = this.state;
-    return (
-      <ul>
-        {this.state.stats}
-      </ul>
-    );
+    const { error, isLoaded, stats } = this.state;
+    if (error){
+      return <div>Error: {error.message}</div>;
+    } else if (!isLoaded) {
+      return <div>Loading...</div>;
+    } else {
+      return (
+        <ul>
+          {stats.map(stat => (
+            <li key={stat.p2.kd}>
+              {stat.label} {stat.displayValue}
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 }
 
