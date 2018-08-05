@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import BarChart from './charts/bar-chart.js';
+import List from './charts/statslist.js';
+
 
 import styles from '../css/App.css';
 
@@ -8,8 +10,9 @@ class App extends Component {
         return (
             <div>
                 <h1>Brothers Fork Knife</h1>
-                <BarChart />
+                <List />
             </div>
+
         );
     }
 }
