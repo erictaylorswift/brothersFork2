@@ -10,6 +10,7 @@ class App extends Component {
         return (
             <div>
                 <h1>Brothers Fork Knife</h1>
+                <BarChart />
                 <List />
             </div>
 
