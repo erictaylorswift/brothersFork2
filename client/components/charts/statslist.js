@@ -13,21 +13,10 @@ class List extends Component {
 
   render() {
     const {posts} = this.state;
-    console.log('stats', parseFloat(window.reactApp.stats.p2.kd.displayValue));
-    const solo = Number(window.reactApp.stats.p2.kd.displayValue);
-    const duos = Number(window.reactApp.stats.p10.kd.displayValue);
-    const squads = Number(window.reactApp.stats.p9.kd.displayValue)
+    console.log('stats', JSON.stringify(window.reactApp, null, 2));
+
     return (
       <ul>
-        <li>
-          Solo KD: {solo}
-        </li>
-        <li>
-          Duos KD: {duos}
-        </li>
-        <li>
-          Squad KD: {squads}
-        </li>
       </ul>
     );
   }
