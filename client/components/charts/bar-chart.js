@@ -1,16 +1,25 @@
 import React, { Component } from "react";
+import { BarChart, XAxis, YAxis, Bar, Tooltip, Cell, ResponsiveContainer } from 'recharts';
 
-import {Bar} from 'react-chartjs-2';
-import { data, options } from '../../chart-data/bar-chart-data.js'
+import { data, colors } from '../../chart-data/bar-chart-data.js'
 
-class BarChart extends Component {
+class KdChart extends Component {
   render() {
     return (
-        <div>
-            <Bar data={data} options={options} width={300} height={125}/>
-        </div>
+        <BarChart data={data}>
+          <XAxis dataKey='name' />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey='kd'>
+            {
+              data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={colors[index]} />
+              ))
+            }
+          </Bar>
+        </BarChart>
     )
   }
 }
 
-export default BarChart;
+export default KdChart;

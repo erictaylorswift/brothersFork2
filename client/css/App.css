@@ -4,3 +4,21 @@ h1 {
     font-size: 68px;
     font-family: 'Dosis', sans-serif;
 }
+
+.mainSection {
+  margin: 22px 64px;
+}
+
+body {
+    background-color: #EEEEEE;
+    margin: 0;
+}
+
+.rechart-wrapper {
+  padding-bottom: 34px ;
+}
+
+.recharts-text {
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+}
