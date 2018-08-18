@@ -40,7 +40,7 @@ function createData(name, matches, wins, per, kills, kd) {
   return { id, name, matches, wins, per, kills, kd };
 };
 
-const players = [0, 1, 2, 3];
+const players = [0, 1, 2, 3, 4];
 let rows =[];
 
 for (var i =0; i<players.length; i++ ){

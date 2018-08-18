@@ -4,7 +4,7 @@ const data = {
       window.reactApp[1].epicUserHandle,
       window.reactApp[2].epicUserHandle,
       window.reactApp[3].epicUserHandle,
-      // window.reactApp[4].epicUserHandle
+      window.reactApp[4].epicUserHandle
     ],
     datasets: [
         {
@@ -21,7 +21,8 @@ const data = {
                 Number(window.reactApp[0].lifeTimeStats[11].value),
                 Number(window.reactApp[1].lifeTimeStats[11].value),
                 Number(window.reactApp[2].lifeTimeStats[11].value),
-                Number(window.reactApp[3].lifeTimeStats[11].value)
+                Number(window.reactApp[3].lifeTimeStats[11].value),
+                Number(window.reactApp[4].lifeTimeStats[11].value)
             ]
         }
     ]

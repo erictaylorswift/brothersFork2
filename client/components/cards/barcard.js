@@ -23,7 +23,7 @@ function BarCard(props) {
   const { classes } = props;
   return (
     <div class='childCard'>
-        <h2><Icon>smoking_rooms</Icon> K/D Stats</h2>
+        <h2><Icon>smoking_rooms</Icon> Lifetime K/D Stats</h2>
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
