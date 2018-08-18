@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res){
   let urls = [
     'https://api.fortnitetracker.com/v1/profile/pc/lonefreak',
-    'https://api.fortnitetracker.com/v1/profile/pc/GA Grumpy',
+    // 'https://api.fortnitetracker.com/v1/profile/pc/Grúmpy',
     'https://api.fortnitetracker.com/v1/profile/pc/ellis endo',
     'https://api.fortnitetracker.com/v1/profile/pc/Ambrosiann',
     'https://api.fortnitetracker.com/v1/profile/pc/BawseMane',

@@ -1,23 +1,17 @@
 import React, { Component } from "react";
-import { BarChart, XAxis, YAxis, Bar, Tooltip, Cell, ResponsiveContainer } from 'recharts';
+import {Bar} from 'react-chartjs-2';
+import { defaults } from 'react-chartjs-2';
 
-import { data, colors } from '../../chart-data/bar-chart-data.js'
+Chart.defaults.global.defaultFontFamily = 'Source Code Pro, monospace'
+
+import { data, options, legend } from '../../chart-data/bar-chart-data.js'
 
 class KdChart extends Component {
   render() {
     return (
-        <BarChart data={data}>
-          <XAxis dataKey='name' />
-          <YAxis />
-          <Tooltip />
-          <Bar dataKey='kd'>
-            {
-              data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={colors[index]} />
-              ))
-            }
-          </Bar>
-        </BarChart>
+        <div class='barChart'>
+            <Bar data={data} options={options} legend={legend}/>
+        </div>
     )
   }
 }

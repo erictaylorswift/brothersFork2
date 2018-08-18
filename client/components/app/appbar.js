@@ -4,23 +4,26 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import Icon from '@material-ui/core/Icon';
+import { theme } from './theme'
 
 const styles ={
-  root: {
-    flexGrow: 1,
-  }
+    root: {
+        flexGrow: 1,
+    }
 }
 
 function SimpleAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Toolbar>
-          <Typography variant="title" color="inherit">
-            Brothers Tracker
-          </Typography>
-        </Toolbar>
+      <AppBar position="static" color='primary'>
+        <Toolbar >
+            <Icon>videogame_asset</Icon>
+            <Typography variant="title" color='inherit' className={classes.title}>
+                Brothers Tracker
+            </Typography>
+      </Toolbar>
       </AppBar>
     </div>
   );

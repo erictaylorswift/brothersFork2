@@ -4,10 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import KdChart from '../charts/bar-chart.js'
-import Icon from '@material-ui/core/Icon'
+import Pie from '../charts/pie-chart.js'
+import Icon from '@material-ui/core/Icon';
 
 const styles = {
   card: {
@@ -19,23 +17,23 @@ const styles = {
   },
 };
 
-function BarCard(props) {
+function PieCard(props) {
   const { classes } = props;
   return (
     <div class='childCard'>
-        <h2><Icon>smoking_rooms</Icon> K/D Stats</h2>
+        <h2><Icon>sentiment_very_dissatisfied</Icon> Kills by Brothers</h2>
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}
-            component={KdChart}
+            component={Pie}
           />
       </Card>
     </div>
   );
 }
 
-BarCard.propTypes = {
+PieCard.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(BarCard);
+export default withStyles(styles)(PieCard);

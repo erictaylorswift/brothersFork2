@@ -4,7 +4,6 @@ const data = {
     window.reactApp[1].epicUserHandle,
     window.reactApp[2].epicUserHandle,
     window.reactApp[3].epicUserHandle,
-    window.reactApp[4].epicUserHandle
   ],
   datasets: [
     {
@@ -18,24 +17,23 @@ const data = {
       ],
       borderWidth: 0,
       data: [
-        Number(window.reactApp[0].lifeTimeStats[8].value),
-        Number(window.reactApp[1].lifeTimeStats[8].value),
-        Number(window.reactApp[2].lifeTimeStats[8].value),
-        Number(window.reactApp[3].lifeTimeStats[8].value),
-        Number(window.reactApp[4].lifeTimeStats[8].value)
+        Number(window.reactApp[0].lifeTimeStats[10].value),
+        Number(window.reactApp[1].lifeTimeStats[10].value),
+        Number(window.reactApp[2].lifeTimeStats[10].value),
+        Number(window.reactApp[3].lifeTimeStats[10].value)
       ]
     }
   ]
   };
 
 const options = {
-  options: {
     responsive: true,
     maintainAspectRatio: true,
-    legend: {
-      display: false,
-    },
-  }
 };
 
-export { data, options };
+const legend = {
+    display: true,
+    position: 'left',
+}
+
+export { data, options, legend };
