@@ -9,7 +9,7 @@ import Icon from '@material-ui/core/Icon';
 
 const styles = {
   card: {
-    maxWidth: 600,
+    maxWidth: 800,
   },
   media: {
     height: 0,
@@ -21,7 +21,7 @@ function PieCard(props) {
   const { classes } = props;
   return (
     <div class='childCard'>
-        <h2><Icon>sentiment_very_dissatisfied_sharp</Icon> Lifetime Kills by Brothers</h2>
+        <h2> Lifetime Kills by Brothers</h2>
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}

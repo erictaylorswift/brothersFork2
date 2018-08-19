@@ -7,7 +7,7 @@ class Pie extends Component {
   render() {
     return (
         <div class='barChart'>
-            <Doughnut data={data} options={options} legend={legend}/>
+            <Doughnut data={data} options={options} legend={legend} width='350' height='175'/>
         </div>
     )
   }

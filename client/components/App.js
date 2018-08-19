@@ -7,6 +7,7 @@ import styles from '../css/App.css';
 import { MuiThemeProvider } from '@material-ui/core/styles'
 import { theme } from './app/theme'
 import SimpleTable from './charts/table'
+import FolderList from './charts/list'
 import Icon from '@material-ui/core/Icon'
 
 class App extends Component {
@@ -17,10 +18,11 @@ class App extends Component {
                     <SimpleAppBar />
                     <div class="mainSection">
                         <div class='container'>
+                            <FolderList />
                             <BarCard />
                             <PieCard />
                         </div>
-                        <h2> <Icon>whatshot</Icon> Current Season Stats </h2>
+                        <h2> Current Season Stats </h2>
                         <SimpleTable />
                     </div>
                 </div>

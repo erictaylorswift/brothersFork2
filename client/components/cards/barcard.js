@@ -11,7 +11,7 @@ import Icon from '@material-ui/core/Icon'
 
 const styles = {
   card: {
-    maxWidth: 600,
+    maxWidth: 800,
   },
   media: {
     height: 0,
@@ -23,7 +23,7 @@ function BarCard(props) {
   const { classes } = props;
   return (
     <div class='childCard'>
-        <h2><Icon>smoking_rooms</Icon> Lifetime K/D Stats</h2>
+        <h2>Lifetime K/D Stats</h2>
         <Card className={classes.card}>
           <CardMedia
             className={classes.media}

@@ -10,7 +10,7 @@ class KdChart extends Component {
   render() {
     return (
         <div class='barChart'>
-            <Bar data={data} options={options} legend={legend}/>
+            <Bar data={data} options={options} legend={legend} width='460' height='230'/>
         </div>
     )
   }

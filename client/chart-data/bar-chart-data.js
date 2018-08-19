@@ -30,9 +30,18 @@ const data = {
 
 const options = {
   options: {
+      scales: {
+          xAxes: [{
+              type: 'user-defined',
+              ticks: {
+                  autoSkip: false,
+                  fontSize: 10,
+              }
+          }]
+      },
     responsive: true,
     maintainAspectRatio: true,
-  }
+    }
 };
 
 const legend = {
