@@ -1,6 +1,38 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    font-size: 68px;
-    font-family: 'Dosis', sans-serif;
+h1, h2, h3 {
+    font-size: 1.5rem;
+    font-family: Source Code Pro, monospace;
+}
+
+.mainSection {
+  margin: 22px 64px;
+}
+
+body {
+    margin: 0;
+}
+
+.rechart-wrapper {
+  padding-bottom: 34px ;
+}
+
+.recharts-text {
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+}
+
+.barChart {
+    margin: 0 auto;
+    padding: 16px;
+    /* min-width: 400px; */
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.childCard {
+    margin-right: 32px;
 }

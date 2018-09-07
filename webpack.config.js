@@ -21,5 +21,9 @@ module.exports = {
      test: /\.css$/,
      loader: "style-loader!css-loader"
     }]
-   }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'client'),
+    watchContentBase: true,
+  }
 }

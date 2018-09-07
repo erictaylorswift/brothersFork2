@@ -1,31 +1,51 @@
 const data = {
-  labels: [
-    'Solos',
-    'Duos',
-    'Squads'
-  ],
-  datasets: [
-    {
-      label: 'KD Score by Type',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [
-        Number(window.reactApp.stats.p2.kd.displayValue),
-        Number(window.reactApp.stats.p10.kd.displayValue),
-        Number(window.reactApp.stats.p9.kd.displayValue)
-      ]
-    }
-  ]
+    labels: [
+      window.reactApp[0].epicUserHandle,
+      window.reactApp[1].epicUserHandle,
+      window.reactApp[2].epicUserHandle,
+      window.reactApp[3].epicUserHandle,
+      window.reactApp[4].epicUserHandle
+    ],
+    datasets: [
+        {
+            label: 'KD Scores',
+            backgroundColor: [
+              '#8C15E0',
+              '#F3CF1A',
+              '#178FDB',
+              '#FC9225',
+              '#6AE2FD'
+            ],
+            borderWidth: 0,
+            data: [
+                Number(window.reactApp[0].lifeTimeStats[11].value),
+                Number(window.reactApp[1].lifeTimeStats[11].value),
+                Number(window.reactApp[2].lifeTimeStats[11].value),
+                Number(window.reactApp[3].lifeTimeStats[11].value),
+                Number(window.reactApp[4].lifeTimeStats[11].value)
+            ]
+        }
+    ]
 };
 
-const options ={
-    options: {
-        maintainAspectRatio: false
+const options = {
+  options: {
+      scales: {
+          xAxes: [{
+              type: 'user-defined',
+              ticks: {
+                  autoSkip: false,
+                  fontSize: 10,
+              }
+          }]
+      },
+    responsive: true,
+    maintainAspectRatio: true,
     }
 };
 
+const legend = {
+    display: false,
+}
 
-export {data, options};
+export {data, options, legend};

@@ -1,20 +1,33 @@
 import React, { Component } from "react";
-import BarChart from './charts/bar-chart.js';
-import List from './charts/statslist.js';
-
-
+import BarCard from './cards/barcard.js';
+import PieCard from './cards/piecard';
+// import Pie from "./charts/pie-chart"
+import SimpleAppBar from './app/appbar.js';
 import styles from '../css/App.css';
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import { theme } from './app/theme'
+import SimpleTable from './charts/table'
+import FolderList from './charts/list'
+import Icon from '@material-ui/core/Icon'
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <h1>Brothers Fork Knife</h1>
-                <BarChart />
-                <List />
-            </div>
-
-        );
+            <MuiThemeProvider theme={theme}>
+                <div>
+                    <SimpleAppBar />
+                    <div class="mainSection">
+                        <div class='container'>
+                            <FolderList />
+                            <BarCard />
+                            <PieCard />
+                        </div>
+                        <h2> Current Season Stats </h2>
+                        <SimpleTable />
+                    </div>
+                </div>
+            </MuiThemeProvider>
+        )
     }
 }
 
